@@ -1,0 +1,47 @@
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      {{"global.pages.login.title"|translate}}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label floating>
+                {{"global.inputs.email"|translate}}
+              </ion-label>
+              <ion-input name="email" [(ngModel)]="credencial.email"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label floating>
+                {{"global.inputs.password"|translate}}
+              </ion-label>
+              <ion-input type="password" name="senha" [(ngModel)]="credencial.senha"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <button ion-button full color="primary" class="btnLogin" (click)="loginComCredencial()">{{"global.buttons.login"|translate}}</button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-50>
+            <button ion-button full class="btnLogin" (click)="loginComFacebook()">{{"global.buttons.login_facebook"|translate}}</button>
+          </ion-col>
+          <ion-col width-50>
+            <button ion-button full class="btnLogin" (click)="loginComGoogle()">{{"global.buttons.login_google"|translate}}</button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <a (click)="doRegister()">{{"global.buttons.register"|translate}}</a>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
